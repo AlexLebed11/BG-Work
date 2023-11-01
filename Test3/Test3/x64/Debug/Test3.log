@@ -1,0 +1,3 @@
+﻿  Test3.cpp
+C:\Users\root\source\repos\Test3\Test3\Test3.cpp(33,9): warning C4101: step: неиспользованная локальная переменная
+  Test3.vcxproj -> C:\Users\root\source\repos\Test3\x64\Debug\Test3.exe
