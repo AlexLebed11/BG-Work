@@ -1,0 +1,227 @@
+Test 1 
+
+RU    (Добавляем 3 библиотеки в код iostream, cctype и map для дальнейшей работы с кодом. Создаем 3 переменных которые будут заполнятся со строки. По нужде меняем их регистр на нижний. Создаем класс map  записываем в него пары значений буква-количество. Определяемся относительно модификаций входной строки и выводим значение.
+
+Первым делом создали 3 переменные типа string которые отвечают за слово и 2 модификации. Добавили считывание строки cin для заполнения значений str, mod1 и mod2. Создали цикл который проходит по каждому элементу str и перезаписывает его меняя регистр каждого элемента на нижний. 
+
+Далее мы создали класс map<char, int> и заполнили его значением str. Ключами служат символы строки str, значением служит количество их повторений в слове.
+
+После мы создали 4 граничные переменные: earlier, later, max, min; благодаря которым мы сможем отсортировать значение выходных данный относительно модификаций. Создаем два if которые определяются относительно mod2. Первый if для значения "earlier" который определяет символ который находится раньше в алфавите относительно других символов в слове. Второй для значения "later" который работаает противоположно первому. Оба if похожи между собой тем, что определяется max и min значение. Отличнаются тем что определяет значение mod2 и записывается значение в соответсвующие переменные.  
+
+В конце создается 2 if которые в зависимости от модификации выводят значение относительно заданым в начале модификациям.
+
+
+Перейдем к sample тестам:... 
+
+Тесты пройдены успешно.
+
+
+Перейдем к личным тестам для проверки правильности работы программы и в случае ошибок её редактирования. 
+
+1)
+Входные данные:
+Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabdcc moreoften earleir
+
+Выходные данные:
+50 a
+
+2)Входные данные:
+a lessoften later
+
+Выходные данные:
+1 a
+
+3)Входные данные:
+Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabdcc lessoften earleir
+
+Выходные данные:
+1 b
+
+4)Входные данные:
+AAaBbbCfffYYY moreoften later
+
+Выходные данные:
+3 y
+
+На всех тестах данные выведены верно. В первом и третьем тесте использовалось большое значение для проверки скорости и правильности программы в случае большого количества. В 2 тесте проверка на миннимум программы. В 4 проверка на правильность мода2.) 
+
+
+
+ENG    ( Add 3 libraries to the code iostream, cctype and map for further work with the code. Create 3 variables that will be filled from the string. If necessary, change their case to lower case. Create a class map and write into it pairs of values letter-quantity. Determine the modifications of the input string and output the value.
+
+At first we create 3 variables type string. It's responsible for word and 2 modification. Add reading string "cin" for fill in the value str, mod1 and mod2/. Created a loop that iterates through each element str and overwriting value, changing to lower register each of them.   
+
+Further create class map<char, int> and filling it value of str. Keys is symbol of string, values is numbers of them repetitions in str.
+
+Create 4 boundary variables: earlier, later, max, min. With it we can sort value entering data regarding modifications. Add to code two cycle which are determined relative to mod2. The first if for the value "earlier" which defines the character that is earlier in the alphabet relative to other characters in the word. The second one is for the value "later" which works the opposite way to the first one. Both ifs are similar in that they define max and min values. They differ in the fact that it determines the mod2 value and writes the value to the corresponding variables.  
+
+At the end 2 if which output value depending on the two modification.)
+
+
+-----------------------------------------
+Test 2 
+
+RU    (Добавим 4 библиотеки которые нужны нам для дальнейшей работы с кодом: iostream, sstream, vector и algorithm. Далее мы будем считывать введенные данные. После будем сортировать строку. Так как один игрок в начале убирает самое большое число, а второй убирает самое маленькое то их конечным числом и будет число в самом центре отсортрированной строки.
+
+Первым делом создаем вектор vector<int> numbers, строку str и переменную int n и num . Создаем ввод для n и ввод для строки вместе с циклом заполнения вектора. Обязательно делаем это через isstream так как str типа string а вектор типа int. Передаем значение str в isstream, после в num и заполняем вектор значениями num.
+
+В конце мы сортируем вектор и создаем if/else. Первый if в случае если парное значение то выводится num который приравнивается элементу находящемуся в позиции - (размер/2 - 1), так как отсчет начинается не с 1, а с 0. В else выводится num в позиции - (размер/2).
+
+Перейдем к sample тестам:... 
+
+Тесты пройдены успешно.
+
+Перейдем к личным тестам для проверки правильности работы программы и в случае ошибок её редактирования. 
+
+1)
+Входные данные:
+1
+5
+
+Выходные данные:
+5
+
+2)
+Входные данные:
+30
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 23 25 26 27 28 29 30
+
+Выходные данные:
+15
+
+На всех тестах данные выведены верно. В первом тесте проверка на миннимум программы. Во втором проверка на большое количество.) 
+)
+
+
+
+ENG    (Let's add 4 libraries that we need for further work with the code: iostream, sstream, vector and algorithm. Next we will read the entered data. After that we will sort the string. Since one player removes the largest number in the beginning, and the second removes the smallest, their final number will be the number in the center of the sorted string.
+
+The first thing we do is to create a vector vector<int> numbers, a string str and a variable int n and num . We create an input for n and an input for str along with a loop to fill the vector. Be sure to do it through isstream because str is of string type and vector is of int type. We pass the value of str to isstream, then to num and fill the vector with num values.
+
+At the end we sort the vector and create if/else. The first if in case of a paired value we output num, which is equal to the element in position - (size/2 - 1), because the counting starts not from 1, but from 0. In else num is output in position - (size/2).)
+
+
+-----------------------------------------
+Test 3
+
+RU    ( Для этого кода нам понадобится 3 библиотеки: iostream, sstream и vector. Так же нам понадобится структура и 2 функции. Структура дерева struct Node, первая функция типа void для создания и заполнения веток. Вторая типа bool для сравнения деревьев котора будет сравнивать предков и дочерние элементы. В main мы создадим 2 вектора типа древа и заполним их значением со строки. Далее будем вызывать функции для создания и заполнения веток дерева из значений векторов. И после мы вызовем функцию сравнеия относительно которой будет возвращено значение true/false.
+
+В первую очередь мы создаем struct Node для деревьев в котором есть int value - переменная которая сохраняет значение и его ответвления Node* left и Node* right. Переходим в main и создаем переменную string str для считвыания строки. Далее Создаем 2 вестора vector<Node*> tree1 и vector<Node*> tree2. Конвертируем строку благодаря sstream и заполням вектора числами и null в зависимости от введенных значений.  
+
+Далее вызываем функцию создания и заполнения древа для первого вектора и для второго. В функции создан цикл который проходит по каждому элементу и сохраняет их 
+в value и его ветки left и right. В цикле предусмотрено, если value = NULL то значения для left и right сохраняется а значение для value переходит на следующею позиции пока не будет числом. 
+
+Когда мы заполнили два древа мы создаем if который будет выдавать значения относительно функции bool. В эту функцию передается 2 корня деревьев (Их самые первые элементы). Первого и второго соответственно. Внутри функция сравнивает value, left и right каждого элемента двух деревьев. Если равны bool возвращает true и консоль выводит "YES" и "NO" если возвращается false.
+
+Перейдем к sample тестам:... 
+
+Тесты пройдены успешно.
+
+Перейдем к личным тестам для проверки правильности работы программы и в случае ошибок её редактирования. 
+
+1)
+Входные данные:
+null null
+null
+
+Выходные данные:
+YES
+
+2)
+Входные данные:
+5 4 10 2 null 6 1 null 9 5 null 2 4
+5 4 10 2 null 6 1 null 9 5 null 2 4 4 4 null
+
+Выходные данные:
+NO
+
+На всех тестах данные выведены верно. В первом тесте мы проверили программу на 2 пустых дерева. Так как оба дерева пусты, они между собой равны. Во втором тесте мы проверили програму на случаи разности деревьев. Второе дерево имеет на 2 элемента больше ( null - это пустота по этому не считается как элемент). Вывод: деревья не равны. 
+
+)
+
+
+
+ENG    (For this code we need 3 libraries: iostream, sstream and vector. We will also need a structure and 2 functions. The tree structure struct Node, the first function of void type to create and fill branches. The second one is of bool type to compare the ancestors and children of the tree. In main we will create two vectors of the tree type and fill them with the value from the string. Then we will call functions to create and fill the branches of the tree from the values of the vectors. And after that we will call the compare function with respect to which the value true/false will be returned.
+
+First of all, we create struct Node for trees, which has int value - a variable that stores the value and its branches Node* left and Node* right. Go to main and create the string str variable to read the string. Next, create 2 vectors vector<Node*> tree1 and vector<Node*> tree2. Convert the string thanks to sstream and fill the vectors with numbers and null depending on the entered values.  
+
+Then we call the function of creating and filling the tree for the first vector and for the second one. The function creates a loop that loops through each element and stores them in value and its left and right branches. The loop provides that if value = NULL then the values for left and right are saved and the value for value moves to the next position until it is a number. 
+
+When we have filled the two trees we create an if which will produce values relative to the bool function. In this function we pass 2 tree roots (their first elements). The first and the second respectively. Inside the function compares the value, left and right of each element of the two trees. If they are equal bool returns true and the console outputs "YES" and "NO" if it returns false.)
+
+
+-----------------------------------------
+Test 4
+
+RU    (Изначально взглянув на задачу можно подумать что нужно создавать код для вычисления математических задач. Но взглянув на треугольник Паскаля и просмторев как выполняются элементы добавления и отнимания мы поймем что во всех введенных значениях кроме нуля уравнение будет приравниватся к 0. В случае нуля. уравнение будет равнятся 1. По этому нам понадобится 1 стандартная библиотека: iostream, 2 переменные и 1 цикл while. Мы создадим считывание 1 переменной для количества вводных числел. Далее цикл который будет повторяться это количество раз. В цикле мы сделаем if/eles который в зависимости от введенного числа будет выдавать 0 или 1.
+
+Создаем переменные t и n. Считываем значение для t. Далле цикл который повторяется t раз. В цикле создаем считывание числа и вывод его значения, подставленного к уравнение. Если число не равно 0 то выводит 0. Если 0, то 1. 
+
+Перейдем к sample тестам:... 
+
+Тесты пройдены успешно.
+
+Перейдем к личным тестам для проверки правильности работы программы и в случае ошибок её редактирования. 
+
+1)
+Входные данные:
+1 
+0
+
+Выходные данные:
+1
+
+2)
+Входные данные:
+20 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+
+Выходные данные:
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+
+На всех тестах данные выведены верно. В первом тесте проверка на миннимум, то есть 0. Во втором тесте проверка на большое количество элементов. )
+
+
+
+ENG    (Initially, looking at the task, we may think that we need to create a code for calculating mathematical equations. But if we look at Pascal's triangle and see how addition and subtraction elements are performed, we will realize that in all entered values except zero, the equation will be equal to 0. In the case of zero, the equation will equal 1. Therefore we need 1 standard library: iostream, 2 variables and 1 while loop. We will create a readout of the first variable for the number of input numbers. Then a loop that will repeat this number of times. In the loop we will make if/eles which will produce 0 or 1 depending on the entered number.
+
+Create variables t and n. Read the value for t. The loop repeats t times. In the loop we create a reading of the number and output its value substituted to the equation. If the number is not equal to 0, it outputs 0. If 0, it outputs 1.)
